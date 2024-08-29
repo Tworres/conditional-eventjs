@@ -1,0 +1,153 @@
+<div class="mb-3 card">
+    <div class="card-body">
+        <div class="form-check">
+            <input class="form-check-input" id="teste1" type="checkbox" value="" onchange="ifInput(this,true,true).show('.teste1')" data-trigger="change"/>
+            <label class="form-check-label">Mostrar input se for true</label>
+        </div>
+
+        <input class="form-control teste1">
+
+    </div>
+</div>
+
+<div class="mb-3 card">
+    <div class="card-body">
+        <div class="form-check">
+            <input class="form-check-input" id="teste2" type="checkbox" value="" onchange="ifInput(this,true,true).hide('.teste2')" data-trigger="change"/>
+            <label class="form-check-label">esconder input se for true</label>
+        </div>
+
+        <input class="form-control teste2">
+
+    </div>
+</div>
+
+<div class="mb-3 card">
+    <div class="card-body">
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" id="teste2" type="checkbox" value="" onchange="ifInput(this,true,true).enable($(this).parent().next())" data-trigger="change"/>
+                <label class="form-check-label">ativa o input se for true</label>
+            </div>
+
+            <input class="form-control">
+        </div>
+
+    </div>
+</div>
+
+<div class="mb-3 card">
+    <div class="card-body">
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" id="teste2" type="checkbox" value="" onchange="ifInput(this,true,true).disable($(this).parent().next())" data-trigger="change"/>
+                <label class="form-check-label">desativa o input se for true</label>
+            </div>
+
+            <input class="form-control">
+        </div>
+
+    </div>
+</div>
+
+<div class="mb-3 card">
+    <div class="card-body">
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" id="teste2" type="checkbox" value="" onchange="ifInput(this,true,true).slideDown($(this).parent().next())" data-trigger="change"/>
+                <label class="form-check-label">desliza para baixo o input se for true</label>
+            </div>
+
+            <input class="form-control">
+        </div>
+
+    </div>
+</div>
+
+<div class="mb-3 card">
+    <div class="card-body">
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" id="teste2" type="checkbox" value="" onchange="ifInput(this,true,true).slideUp($(this).parent().next())" data-trigger="change"/>
+                <label class="form-check-label">desliza para cima o input se for true</label>
+            </div>
+
+            <input class="form-control">
+        </div>
+
+    </div>
+</div>
+
+<div class="mb-3 card">
+    <div class="card-body">
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" id="teste2" type="checkbox" value="" onchange="ifInput(this,true,true).readOnly($(this).parent().next())" data-trigger="change"/>
+                <label class="form-check-label">torna readonly se for true</label>
+            </div>
+
+            <input class="form-control">
+        </div>
+
+    </div>
+</div>
+
+<div class="mb-3 card">
+    <div class="card-body">
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" id="teste2" type="checkbox" value="" onchange="ifInput(this,true,true).readWrite($(this).parent().next())" data-trigger="change"/>
+                <label class="form-check-label">remove o readonly se for true</label>
+            </div>
+
+            <input class="form-control">
+        </div>
+
+    </div>
+</div>
+
+<div class="mb-3 card">
+    <div class="card-body">
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" id="teste2" type="checkbox" value="" onchange="ifInput(this,true,true).setInputValue('.fieldSetValue', 'sim')" data-trigger="change"/>
+                <label class="form-check-label">Altera o valor de outros campos se for true</label>
+            </div>
+
+            <input class="form-control fieldSetValue">
+            <select class="form-control fieldSetValue">
+                <option></option>
+                <option>não</option>
+                <option>sim</option>
+            </select>
+            <input type="checkbox" class="fieldSetValue">
+        </div>
+
+    </div>
+</div>
+
+<div class="mb-3 card">
+    <div class="card-body">
+        <select class="form-control" onchange="ifInput(this,'m',true).show('.teste3')" data-trigger="change">
+            <option value="m">Mostrar</option>
+            <option>Não mostrar</option>
+        </select>
+        <input class="form-control teste3" placeholder="teste3">
+
+    </div>
+</div>
+
+<div class="mb-3 card">
+    <div class="card-body">
+        <input class="form-control" oninput="ifNotEmpty(this).show('#testeee')" data-trigger="input" placeholder="Mostra campo abaixo se este não estiver vázio">
+        <input class="form-control" id="testeee">
+
+    </div>
+</div>
+
+<script>
+    function triggerEvents(){
+        $('[data-trigger]').each((key, el) => $(el).trigger($(el).data('uTrigger')))
+    }
+    triggerEvents()
+</script>
