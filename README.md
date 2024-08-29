@@ -1,4 +1,4 @@
-# ConditionalEvent
+# ConditionalEvent - alfa
 
 **ConditionalEvent** was created to solve the problem of repetitive rewriting in form creation, where multiple functions are needed to trigger events only under certain conditions.
 
